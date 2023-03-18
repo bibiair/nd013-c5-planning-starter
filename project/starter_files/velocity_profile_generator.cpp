@@ -390,7 +390,7 @@ double VelocityProfileGenerator::calc_final_speed(const double& v_i,
   // and make v_f = 0 in that case. If the discriminant is inf or nan return
   // infinity
 
-  // double disc = sqrt(2*a*d+pow(v_i,2));  // <- Fix this
+  double disc = sqrt(2*a*d+pow(v_i,2));  // <- Fix this
   double disc = 0;
   if (disc <= 0.0) {
     v_f = 0.0;
